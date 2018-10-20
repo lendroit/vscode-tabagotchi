@@ -1,6 +1,6 @@
-# tabagochi README
+# tabagotchi README
 
-This extension was inspired by this chrome extension [tabagoshi](http://tabagotchi.com/). It prevents you from openning too many tabs (e.g. it helps you realise you are completely lost in your 15 tabs of Stack Overflow and you need to take a 5 min break)
+This extension was inspired by this chrome extension [tabagoshi](http://tabagotcchi.com/). It prevents you from openning too many tabs (e.g. it helps you realise you are completely lost in your 15 tabs of Stack Overflow and you need to take a 5 min break)
 
 ## Features
 

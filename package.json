@@ -1,6 +1,6 @@
 {
-  "name": "tabagochi",
-  "displayName": "tabagochi",
+  "name": "tabagotchi",
+  "displayName": "tabagotchi",
   "description": "Keep focus, do not open too many tabs",
   "version": "0.0.1",
   "publisher": "sammyteillet",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lendroit/vscode-tabagochi.git"
+    "url": "https://github.com/lendroit/vscode-tabagotchi.git"
   },
   "categories": [
     "Other"

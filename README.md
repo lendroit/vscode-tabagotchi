@@ -1,65 +1,31 @@
 # tabagochi README
 
-This is the README for your extension "tabagochi". After writing up a brief description, we recommend including the following sections.
+This extension was inspired by this chrome extension [tabagoshi](http://tabagotchi.com/). It prevents you from openning too many tabs (e.g. it helps you realise you are completely lost in your 15 tabs of Stack Overflow and you need to take a 5 min break)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This extensions warns you when you have too many files open in your workspace.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![Clean your workspace indo](images/example.gif)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+Soon you'll be able to configure the threshold of the warnings.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+At launch, the tabs that are already open are not counted. The counter starts at 0 if you don't have any open tab, or 1. If you visit your tabs though, they will be counted.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Initial release:
 
-### 1.0.1
+- An error message and an info message are displayed when you open a file while more than 10 files where already open.
 
-Fixed issue #.
+## Coming soon
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Count the real number of open tab at launch.
+Allow user to set the number of tabs before the tabagoshi warns you.
+Implement an actual tabagoshi that will loose life if you have too many tabs, or will level up if you keep your workspace cleen.

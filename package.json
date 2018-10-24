@@ -2,7 +2,7 @@
   "name": "tabagotchi",
   "displayName": "tabagotchi",
   "description": "Keep focus, keep a tidy workspace",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "sammyteillet",
   "engines": {
     "vscode": "^1.20.0"

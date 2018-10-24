@@ -1,11 +1,11 @@
 {
   "name": "tabagotchi",
   "displayName": "tabagotchi",
-  "description": "Keep focus, do not open too many tabs",
+  "description": "Keep focus, keep a tidy workspace",
   "version": "0.0.1",
   "publisher": "sammyteillet",
   "engines": {
-    "vscode": "^1.28.0"
+    "vscode": "^1.20.0"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   "activationEvents": [
     "*"
   ],
+  "logo": "lendroit-logo.jpeg",
   "main": "./out/extension",
   "contributes": {
     "commands": [

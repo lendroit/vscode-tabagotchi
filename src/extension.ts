@@ -22,7 +22,9 @@ export function activate(context: vscode.ExtensionContext) {
     const nameOfFile: string = textEditor.document.fileName;
     fileListMap[nameOfFile] = true;
     const numberOfOpenFiles = getNumberOfOpenFiles();
-    if (numberOfOpenFiles >= 10) {
+    const settings = workspace.getConfiguration();
+    const tabThreshold = settings.get("tabagotchi.tabThreshold") || 5;
+    if (numberOfOpenFiles >= tabThreshold) {
       vscode.window.showErrorMessage(`You have ${numberOfOpenFiles} files open`);
       vscode.window.showInformationMessage(`Take a deep breath and clean your workspace`);
     }

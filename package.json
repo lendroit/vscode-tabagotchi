@@ -25,6 +25,19 @@
         "command": "extension.sayNumberOfTabsOpen",
         "title": "How many tabs ?"
       }
+    ],
+    "configuration": [
+      {
+        "title": "tabagotchi",
+        "properties": {
+          "tabagotchi.tabThreshold": {
+            "type": "number",
+            "default": 5,
+            "description": "Number of tab to open before triggering a warning",
+            "scope": "application"
+          }
+        }
+      }
     ]
   },
   "scripts": {

@@ -14,7 +14,7 @@ Soon you'll be able to configure the threshold of the warnings.
 
 ## Known Issues
 
-At launch, the tabs that are already open are not counted. The counter starts at 0 if you don't have any open tab, or 1. If you visit your tabs though, they will be counted.
+At launch, the extensions tracks your open tabs by switching on each of them. I am waiting for [this VSCode issue](https://github.com/Microsoft/vscode/issues/15178) to be solved.
 
 ## Release Notes
 
@@ -26,10 +26,12 @@ Initial release:
 
 ### 0.2.0
 
-- Configuration setting to set the tab threshold before warnings appear.
+- Configuration setting to set the tab threshold before warnings appear (default value is 5).
 
 ## Coming soon
 
-Count the real number of open tab at launch.
-Allow user to set the number of tabs before the tabagoshi warns you.
 Implement an actual tabagoshi that will loose life if you have too many tabs, or will level up if you keep your workspace cleen.
+
+This extension was developped at LEndroit.
+
+<img src="https://raw.githubusercontent.com/lendroit/vscode-tabagotchi/master/lendroit-logo.jpeg" alt="drawing" width="200"/>

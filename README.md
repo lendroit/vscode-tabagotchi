@@ -18,11 +18,15 @@ At launch, the tabs that are already open are not counted. The counter starts at
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release:
 
 - An error message and an info message are displayed when you open a file while more than 10 files where already open.
+
+### 0.2.0
+
+- Configuration setting to set the tab threshold before warnings appear.
 
 ## Coming soon
 

@@ -1,6 +1,10 @@
 # tabagotchi README
 
-This extension was inspired by this chrome extension [tabagoshi](http://tabagotcchi.com/). It prevents you from openning too many tabs (e.g. it helps you realise you are completely lost in your 15 tabs of Stack Overflow and you need to take a 5 min break)
+This extension prevents you from opening too many tabs in your workspace. 
+When you are dealing with compexe issues you tend to try to do multiple things at a time, or you struggle to understand a behaviour, You end up having all the files of your project open.
+This is when you need a five minute break.
+
+Think of the equivalent situation when you have 15 tabs open in your browser, 3 of them are the same stack overflow issue and you are lost between documentation and github issues, that is the moment when you need to clean your environment. This extension was inspired by [tabagotchi](http://tabagotchi.com/) a chrome extension that I strongly recommend.
 
 ## Features
 
@@ -10,7 +14,13 @@ This extensions warns you when you have too many files open in your workspace.
 
 ## Extension Settings
 
-Soon you'll be able to configure the threshold of the warnings.
+Default settings:
+
+```JSON
+{
+  "tabagotchi.tabThreshold": 5,
+}
+```
 
 ## Known Issues
 

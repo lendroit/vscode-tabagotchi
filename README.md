@@ -1,5 +1,7 @@
 # tabagotchi README
 
+(ᵔᴥᵔ) <- This is your Tabagotchi, take care of it, it gets annoyed when you have too many tabs open.
+
 This extension prevents you from opening too many tabs in your workspace.
 When you are dealing with compexe issues you tend to try to do multiple things at a time, or you struggle to understand a behaviour, You end up having all the files of your project open.
 This is when you need a five minute break.
@@ -9,7 +11,9 @@ Think of the equivalent situation when you have 15 tabs open in your browser, 3 
 ## Features
 
 This extensions warns you when you have too many files open in your workspace.
+When you reach the threshold the tabagotchi starts to dance.
 
+![dancing tabagotchi](images/tabagotchi_dancing.gif)
 ![Clean your workspace indo](images/example.gif)
 
 ## Extension Settings

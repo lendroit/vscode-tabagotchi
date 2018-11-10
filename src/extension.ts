@@ -56,10 +56,14 @@ export async function activate(context: ExtensionContext) {
     const numberOfOpenFiles = getNumberOfOpenFiles();
     const settings = workspace.getConfiguration();
     const tabThreshold: number = settings.get("tabagotchi.tabThreshold") || 5;
+    const displayMessages: boolean = settings.get("tabagotchi.displayMessages") === (undefined || true);
+
     if (numberOfOpenFiles >= tabThreshold) {
       tabagotchi.dance();
-      window.showErrorMessage(`You have ${numberOfOpenFiles} files open`);
-      window.showInformationMessage(`Take a deep breath and clean your workspace`);
+      if (displayMessages) {
+        window.showErrorMessage(`You have ${numberOfOpenFiles} files open`);
+        window.showInformationMessage(`Take a deep breath and clean your workspace`);
+      }
       if (numberOfOpenFiles >= tabThreshold + 5) {
         tabagotchi.annoyed();
       }

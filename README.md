@@ -1,6 +1,6 @@
 # tabagotchi README
 
-This extension prevents you from opening too many tabs in your workspace. 
+This extension prevents you from opening too many tabs in your workspace.
 When you are dealing with compexe issues you tend to try to do multiple things at a time, or you struggle to understand a behaviour, You end up having all the files of your project open.
 This is when you need a five minute break.
 
@@ -19,6 +19,7 @@ Default settings:
 ```JSON
 {
   "tabagotchi.tabThreshold": 5,
+  "tabagotchi.displayMessage": true,
 }
 ```
 

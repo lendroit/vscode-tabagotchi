@@ -35,6 +35,12 @@
             "default": 5,
             "description": "Number of tab to open before triggering a warning",
             "scope": "application"
+          },
+          "tabagotchi.displayMessages": {
+            "type": "boolean",
+            "default": true,
+            "description": "Display warnings when too many tabs are open",
+            "scope": "application"
           }
         }
       }

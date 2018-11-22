@@ -53,6 +53,24 @@ export async function activate(context: ExtensionContext) {
     }
     const nameOfFile: string = textEditor.document.fileName;
     fileListMap[nameOfFile] = true;
+    handleNumberOfOpenFileChange();
+  });
+
+  workspace.onDidCloseTextDocument(document => {
+    const nameOfFile: string = document.fileName;
+    fileListMap[nameOfFile] = false;
+  });
+
+  const getNumberOfOpenFiles = () => {
+    return Object.keys(fileListMap).filter(fileName => fileListMap[fileName]).length;
+  };
+
+  const displayNumberOfFiles = () => {
+    const numberOfOpenFiles = getNumberOfOpenFiles();
+    window.showInformationMessage("Number of tab: " + numberOfOpenFiles);
+  };
+
+  const handleNumberOfOpenFileChange = () => {
     const numberOfOpenFiles = getNumberOfOpenFiles();
     const settings = workspace.getConfiguration();
     const tabThreshold: number = settings.get("tabagotchi.tabThreshold") || 5;
@@ -70,20 +88,6 @@ export async function activate(context: ExtensionContext) {
     } else {
       tabagotchi.show();
     }
-  });
-
-  workspace.onDidCloseTextDocument(document => {
-    const nameOfFile: string = document.fileName;
-    fileListMap[nameOfFile] = false;
-  });
-
-  const getNumberOfOpenFiles = () => {
-    return Object.keys(fileListMap).filter(fileName => fileListMap[fileName]).length;
-  };
-
-  const displayNumberOfFiles = () => {
-    const numberOfOpenFiles = getNumberOfOpenFiles();
-    window.showInformationMessage("Number of tab: " + numberOfOpenFiles);
   };
 
   let disposable = commands.registerCommand("extension.sayNumberOfTabsOpen", displayNumberOfFiles);

@@ -59,6 +59,7 @@ export async function activate(context: ExtensionContext) {
   workspace.onDidCloseTextDocument(document => {
     const nameOfFile: string = document.fileName;
     fileListMap[nameOfFile] = false;
+    handleNumberOfOpenFileChange();
   });
 
   const getNumberOfOpenFiles = () => {

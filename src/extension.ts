@@ -20,6 +20,7 @@ export async function activate(context: ExtensionContext) {
   let active = window.activeTextEditor;
   let editor = active;
   const openEditors: TextEditor[] = [];
+  let timeToWait = 1000;
   do {
     if (editor !== null && !isUndefined(editor)) {
       // If we didn't start with a valid editor, set one once we find it
@@ -30,7 +31,8 @@ export async function activate(context: ExtensionContext) {
       openEditors.push(editor);
     }
 
-    editor = await editorTracker.awaitNext(1000);
+    editor = await editorTracker.awaitNext(timeToWait);
+    timeToWait = 10000;
     if (
       editor !== undefined &&
       openEditors.some(_ => TextEditorComparer.equals(_, editor, { useId: true, usePosition: true }))

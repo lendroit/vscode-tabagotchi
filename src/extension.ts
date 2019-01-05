@@ -81,7 +81,7 @@ export async function activate(context: ExtensionContext) {
 
     if (numberOfOpenFiles >= tabThreshold) {
       tabagotchi.dance();
-      if (displayMessages) {
+      if (displayMessages && Math.max(numberOfOpenFiles - tabThreshold, 0) % 5 === 0) {
         window.showErrorMessage(`(ᵔᴥᵔ) You have ${numberOfOpenFiles} files open`);
         window.showInformationMessage(`(ᵔᴥᵔ) Take a deep breath and clean your workspace`);
       }

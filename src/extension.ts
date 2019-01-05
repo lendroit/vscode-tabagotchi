@@ -4,6 +4,14 @@ import { isUndefined } from "util";
 import { ActiveEditorTracker } from "./activeEditorTracker";
 import { TextEditorComparer } from "./comparers";
 
+const LEAVE_ME_ALONE = "Leave me alone";
+
+let leaveMeAloneTime: number = 0;
+
+const shallLeaveAlone: () => boolean = () => {
+  return Date.now() - leaveMeAloneTime < 600000;
+};
+
 interface FileListMap {
   [key: string]: boolean;
 }
@@ -81,9 +89,18 @@ export async function activate(context: ExtensionContext) {
 
     if (numberOfOpenFiles >= tabThreshold) {
       tabagotchi.dance();
-      if (displayMessages && Math.max(numberOfOpenFiles - tabThreshold, 0) % 5 === 0) {
-        window.showErrorMessage(`(ᵔᴥᵔ) You have ${numberOfOpenFiles} files open`);
-        window.showInformationMessage(`(ᵔᴥᵔ) Take a deep breath and clean your workspace`);
+      if (displayMessages && !shallLeaveAlone() && Math.max(numberOfOpenFiles - tabThreshold, 0) % 5 === 0) {
+        window
+          .showInformationMessage(
+            `(ᵔᴥᵔ) Take a deep breath and clean your workspace. You have ${numberOfOpenFiles} files open.`,
+            LEAVE_ME_ALONE
+          )
+          .then((selection?: string) => {
+            if (selection === LEAVE_ME_ALONE) {
+              leaveMeAloneTime = Date.now();
+              console.log("croute");
+            }
+          });
       }
       if (numberOfOpenFiles >= tabThreshold + 5) {
         tabagotchi.annoyed();
